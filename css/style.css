@@ -1,0 +1,103 @@
+body{
+    width: auto;
+    height: auto;
+    margin:5%;
+    padding: 5%;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border:solid black;
+}
+
+img{
+    width: auto;
+    height: 300px;
+    border:solid blue;
+}
+
+#start {
+  display: flex;
+  flex-direction: column; /* ← 縦並び */
+  gap: 12px;              /* 間隔 */
+  align-items: center;   /* 中央揃え（不要なら消す） */
+}
+
+#username{
+    width: 60%;
+    height: 50px;
+    margin: 5%;
+}
+
+#startBtn{
+    width: 210px;
+    height: 120px;
+    font-size: 20px;
+    background-image: url(../images/btnStart.png);
+}
+
+#btnA {
+    background-image: url("../images/btnA.png");
+    margin: 10px;
+}
+
+#btnB {
+    background-image: url("../images/btnB.png");
+    margin: 10px;
+}
+
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button {
+    width: 100vw;   /* 画面幅の40% */
+    height: 70vh;  /* 画面高さの20% */
+
+    max-width: 300px;  /* 大きくなりすぎ防止 */
+    max-height: 180px;
+
+    min-width: 180px;  /* 小さくなりすぎ防止 */
+    min-height: 100px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+
+    background-size: cover;       /* 画像をピッタリ表示 */
+    background-position: center; /* 中央配置 */
+    background-repeat: no-repeat;
+
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    appearance: none;        /* 標準スタイル削除（最重要） */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: transparent; /* グレー背景を完全に消す */
+    border: none;
+    padding: 0;
+
+    background-size: contain;      /* ✅ 画像全体を表示 */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: transparent; /* 余白用（任意） */
+
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    padding: 0;
+}
