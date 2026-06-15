@@ -9,23 +9,54 @@ body{
     border:solid black;
 }
 
-img{
+.container{
+    width:90%;
+    max-width:700px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.hidden{
+    display:none;
+}
+
+h1,h2,h3{
+    color:#333;
+}
+
+
+canvas{
+    max-width: 550px;
+    border: 1px solid red;
+    align-items: center;   /* 中央揃え（不要なら消す） */
+}
+
+img {
     width: auto;
     height: 300px;
     border:solid blue;
 }
 
-#start {
-  display: flex;
-  flex-direction: column; /* ← 縦並び */
-  gap: 12px;              /* 間隔 */
-  align-items: center;   /* 中央揃え（不要なら消す） */
+.button-area{
+    gap: 12px;              /* 間隔 */
+    align-items: center;   /* 中央揃え（不要なら消す） */
+    border: solid blue;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: center; /* 縦中央 */
+    align-items: center;     /* 横中央 */
+    display: flex;
+    
 }
 
-#username{
-    width: 60%;
-    height: 50px;
-    margin: 5%;
+#start {
+    display: flex;
+    flex-direction: column; /* ← 縦並び */
+    gap: 12px;              /* 間隔 */
+    align-items: center;   /* 中央揃え（不要なら消す） */
 }
 
 #startBtn{
@@ -37,12 +68,10 @@ img{
 
 #btnA {
     background-image: url("../images/btnA.png");
-    margin: 10px;
 }
 
 #btnB {
     background-image: url("../images/btnB.png");
-    margin: 10px;
 }
 
 
@@ -55,49 +84,36 @@ button:hover {
 }
 
 button {
-    width: 100vw;   /* 画面幅の40% */
-    height: 70vh;  /* 画面高さの20% */
+    width: 35vw;
+    height: 25vh;
 
-    max-width: 300px;  /* 大きくなりすぎ防止 */
+    max-width: 300px;
     max-height: 180px;
 
-    min-width: 180px;  /* 小さくなりすぎ防止 */
-    min-height: 100px;
+    min-width: 90px;
+    min-height: 50px;
 
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
-    appearance: none;
     background-color: transparent;
-    border: none;
-    padding: 0;
-
-
-    background-size: cover;       /* 画像をピッタリ表示 */
-    background-position: center; /* 中央配置 */
-    background-repeat: no-repeat;
 
     border: none;
     padding: 0;
     cursor: pointer;
 
-    appearance: none;        /* 標準スタイル削除（最重要） */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    background-color: transparent; /* グレー背景を完全に消す */
-    border: none;
-    padding: 0;
-
-    background-size: contain;      /* ✅ 画像全体を表示 */
-    background-position: center;
-    background-repeat: no-repeat;
-
-    background-color: transparent; /* 余白用（任意） */
-
     appearance: none;
     -webkit-appearance: none;
-    border: none;
-    padding: 0;
+    -moz-appearance: none;
+}
+
+#username{
+    width: 60%;
+    height: 50px;
+}
+
+.chart-container{
+    width: min(70vw, 400px);
+    height: min(70vw, 400px);
+    margin: 0 auto;
 }
