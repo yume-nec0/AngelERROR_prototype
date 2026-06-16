@@ -37,7 +37,7 @@ const characters = {
 
   nemu: {
     name: "夜宵ねむ",
-    image: "images/n05.jpg",
+    image: "images/05.jpg",
     description: "休息タイプ。今は休むことも大切な選択肢。"
   }
 
