@@ -146,6 +146,7 @@ function answer(choice) {
   } else {
     showResult();
   }
+  
 }
 
 function showResult() {
@@ -212,7 +213,9 @@ function showResult() {
     </div>
     
   </div>
-
+  <button id="retryBtn">
+    もう一度診断する
+  </button>
   `;
 
   new Chart(document.getElementById("chart"), {
@@ -248,7 +251,48 @@ function showResult() {
     }
 
   });
+  document.getElementById("retryBtn")
+    .addEventListener("click", function(){
+      location.reload();
+    });
+}
 
+
+let answerHistory = [];
+function answer(choice) {
+
+  answerHistory.push(choice);
+
+  const pointData = questions[current][choice];
+
+  for (const key in pointData) {
+    scores[key] += pointData[key];
+  }
+
+  current++;
+
+  if (current < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+}
+function goBack() {
+
+  if(current === 0) return;
+
+  current--;
+
+  const previousAnswer = answerHistory.pop();
+
+  const pointData =
+    questions[current][previousAnswer];
+
+  for(const key in pointData){
+    scores[key] -= pointData[key];
+  }
+
+  showQuestion();
 }
 
 window.onload = function () {
@@ -280,5 +324,8 @@ window.onload = function () {
   .addEventListener("click", function () {
     answer("no");
   });
+
+  document.getElementById("backBtn")
+  .addEventListener("click", goBack);
 
 };
