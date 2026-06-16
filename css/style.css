@@ -2,7 +2,7 @@ body{
     width: auto;
     height: auto;
     margin:5%;
-    padding: 5%;
+    padding: 2%;
     text-align: center;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -75,13 +75,51 @@ canvas{
     align-items:center;
     gap:30px;
     border: solid rgb(90, 255, 104);
+    padding:0;
+    margin:0;
 }
 
-.chart-container{
-    border: solid black;
+/* スマホ向け（画面幅が600px以下） */
+@media (max-width: 600px) {
+    .button-area{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1,h2,p{
+        font-size: 0.7rem;
+    }
+    
+    #percent li{
+        font-size: 0.65rem;
+        width: 100px;
+    }
+    .icon{
+    width:20px;
+    text-align:center;
+    flex-shrink:0;
+    }
+
+    .name{
+        width:40px;
+        text-align:center;
+        flex-shrink:0;
+    }
+
+    .rate{
+        width:30px;
+        text-align:end;
+        flex-shrink:0;
+    }
+
 }
 
-@media screen and (min-width:960px){
+/* タブレット向け（画面幅が601pxから900px） */
+@media (min-width: 601px) and (max-width: 900px) {
+}
+
+/* PC向け（画面幅が901px以上） */
+@media (min-width: 901px) {
     #result-area{
         gap:60px;
     }
@@ -94,12 +132,11 @@ canvas{
     }
 }
 
-
 #chart /*円グラフ*/{
     width: 100% !important;
     height: 100% !important;
     border:solid rgb(255, 0, 255);
-    max-height: 500px;
+    max-height: 400px;
 }
 
 img {
