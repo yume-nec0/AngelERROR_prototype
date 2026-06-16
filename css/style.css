@@ -6,7 +6,7 @@ body{
     text-align: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    border:solid black;
+    border: solid burlywood
 }
 
 .hidden{
@@ -19,26 +19,87 @@ h1,h2,h3{
 
 
 canvas{
-    border: 1px solid red;
-    display: block;
+    border: 1px solid rgb(255, 0, 0);
 }
 
 #percent{
     display: flex;
+    border: solid skyblue;
+    justify-content:center;
+    gap:20px;
+    padding:0;
+    margin:0;
+}
+
+#percent ul{
+    display: flex;
+    border: solid rgb(98, 0, 255);
+    flex-direction:column;
+    padding:0;
+    margin:0;
+
+}
+#percent li{
+    list-style:none;
+    display:flex;
+    align-items:center;
+
+    width:170px;
+    margin:1px 0;
+
+    border:solid rgb(175, 90, 255);
+}
+
+.icon{
+    width:30px;
+    text-align:center;
+    flex-shrink:0;
+}
+
+.name{
+    width:70px;
+    text-align:center;
+    flex-shrink:0;
+}
+
+.rate{
+    width:50px;
+    text-align:end;
+    flex-shrink:0;
+}
+
+
+#result-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    border: solid rgb(90, 255, 104);
 }
 
 .chart-container{
-    width: min(80vw, 400px);
-    aspect-ratio: 1 / 1;
-    margin: 0 auto;
-    position: relative;
-    border:solid orange;
+    border: solid black;
 }
 
-#chart{
+@media screen and (min-width:960px){
+    #result-area{
+        gap:60px;
+    }
+    #percent li{
+        font-size:1.2rem;
+    }
+    .chart-container{
+        height:500px;
+        width: auto;
+    }
+}
+
+
+#chart /*円グラフ*/{
     width: 100% !important;
     height: 100% !important;
-    border:solid purple;
+    border:solid rgb(255, 0, 255);
+    max-height: 500px;
 }
 
 img {

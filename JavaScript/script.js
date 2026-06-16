@@ -177,14 +177,40 @@ function showResult() {
 
   <p>${result.description}</p>
 
-  <canvas id="chart"></canvas>
-
-  <div id="percent">
-    <p>せら ${Math.round(scores.sera/total*100)}%</p>
-    <p>ノエル ${Math.round(scores.noel/total*100)}%</p>
-    <p>レイ ${Math.round(scores.rei/total*100)}%</p>
-    <p>ナナ ${Math.round(scores.nana/total*100)}%</p>
-    <p>ねむ ${Math.round(scores.nemu/total*100)}%</p>
+  <div id="result-area">
+    <div class="chart-container">
+      <canvas id="chart"></canvas>
+    </div>
+    <div id="percent">
+      <ul>
+        <li>
+          <span class="icon">🩷</span>
+          <span class="name">せら</span> 
+          <span class="rate">${Math.round(scores.sera/total*100)}%</span>
+        </li>
+        <li>
+          <span class="icon">💚</span>
+          <span class="name">ノエル</span>
+          <span class="rate">${Math.round(scores.noel/total*100)}%</span>
+        </li>
+        <li>
+          <span class="icon">💙</span>
+          <span class="name">レイ</span>
+          <span class="rate">${Math.round(scores.rei/total*100)}%</span>
+        </li>
+        <li>
+          <span class="icon">💛</span>
+          <span class="name">ナナ</span>
+          <span class="rate">${Math.round(scores.nana/total*100)}%</span>
+          </li>
+        <li>
+          <span class="icon">💜</span>
+          <span class="name">ねむ</span>
+          <span class="rate">${Math.round(scores.nemu/total*100)}%</span>
+        </li>
+      </ul>
+    </div>
+    
   </div>
 
   `;
@@ -194,13 +220,13 @@ function showResult() {
     type: "pie",
 
     data: {
-      labels: [
+      /*labels: [
         "せら",
         "ノエル",
         "レイ",
         "ナナ",
         "ねむ"
-      ],
+      ],*/
 
       datasets: [{
         data: [
