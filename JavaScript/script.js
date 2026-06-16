@@ -214,7 +214,7 @@ function showResult() {
         "#ffb6c1",
         "#98fb98",
         "#87ceeb",
-        "#ffd700",
+        "#ffe760",
         "#dda0dd"
         ],
         
